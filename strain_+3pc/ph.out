@@ -1,0 +1,50 @@
+
+     Program PHONON v.7.2 starts on 09Jun2025 at 03:13:48
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     
+     Reading input from ph.in
+     
+     Reading xml data from directory:
+     ./tmp/Li2NH_ci.save/
+     
+     Atomic displacements:
+     There are   12 irreducible representations
+     
+     Representation     1      1 modes - Phonon calculation done
+     Representation     2      1 modes - Phonon calculation done
+     Representation     3      1 modes - Phonon calculation done
+     
+     q = (    0.000000000   0.000000000   0.000000000 )
+     
+     **************************************************************************
+     freq (    1) =      -0.500000 [THz] =    -16.68 [cm-1]
+     freq (    2) =      4.422233 [THz] =    147.51 [cm-1]
+     freq (    3) =      5.618222 [THz] =    187.40 [cm-1]
+     freq (    4) =      6.267161 [THz] =    209.05 [cm-1]
+     freq (    5) =      8.483472 [THz] =    282.97 [cm-1]
+     freq (    6) =      13.648521 [THz] =    455.26 [cm-1]
+     **************************************************************************
+     
+     Mode symmetry, C3v point group:
+     
+     Electron-phonon coupling constants
+     
+     Gaussian Broadening:   0.005 Ry, ngauss=   0
+     DOS =  2.572 states/spin/Ry/Unit Cell at Ef=  -3.192 eV
+     
+     lambda( 1)=  0.210   gamma=    2.07 meV
+     lambda( 2)=  0.110   gamma=    2.36 meV
+     lambda( 3)=  0.166   gamma=    2.25 meV
+     lambda( 4)=  0.282   gamma=    1.23 meV
+     lambda( 5)=  0.194   gamma=    2.99 meV
+     lambda( 6)=  0.157   gamma=    2.97 meV
+     
+     lambda =   0.750
+     omega(log)=   381.1 K =   265.0 cm-1
+     
+     Estimated Allen-Dynes Tc =   165.6 K for muc =  0.10
+     
+     PHONON       :   9.0s CPU   9.0s WALL
+     
+   This run was terminated on:  09Jun2025 at 03:13:48

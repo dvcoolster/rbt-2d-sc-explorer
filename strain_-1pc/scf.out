@@ -1,0 +1,50 @@
+
+     Program PWSCF v.7.2 starts on 09Jun2025 at 03:13:49
+     This program is part of the open-source Quantum ESPRESSO suite
+
+     Parallel version (MPI), running on     1 processors
+
+     Reading input from scf.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum         1138     1138    292           11428    5406   2055
+
+     Using Slab Decomposition
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =       6.58350  a.u.
+     unit-cell volume          =     784.08  (a.u.)^3
+
+     convergence has been achieved in   10 iterations
+
+!    total energy              =     -123.41452652 Ry
+     estimated scf accuracy    <       0.00000001 Ry
+
+     The total energy is the sum of the following terms:
+     one-electron contribution =     -86.39016857 Ry
+     hartree contribution      =      -24.68290530 Ry
+     xc contribution           =     -12.34145265 Ry
+
+     Writing all to output data dir ./tmp/Li2NH_ci.save/
+
+     init_run     :      0.31s CPU      0.42s WALL (       1 calls)
+     electrons    :      3.08s CPU      3.08s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.03s CPU      0.03s WALL (       1 calls)
+     potinit      :      0.13s CPU      0.17s WALL (       1 calls)
+     hinit0       :      0.13s CPU      0.19s WALL (       1 calls)
+
+     PWSCF        :      2.13s CPU      2.13s WALL
+
+   This run was terminated on:  09Jun2025 at 03:13:49
