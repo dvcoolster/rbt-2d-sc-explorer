@@ -15,17 +15,28 @@ This repository provides a complete workflow for Prof. Deep Jariwala's lab (or a
 ## Quick Start
 
 ```bash
-# Create and activate conda environment
+# 1. Clone and install (editable) – brings CLI tools into $PATH
+git clone https://github.com/dvcoolster/rbt-2d-sc-explorer.git
+cd rbt-2d-sc-explorer
+
+# Option A – conda (recommended for QE users)
 conda env create -f environment.yml
 conda activate rbt_sc
 
-# Test the parity checker on example structures
-python scripts/parity_check.py data/example_CIFs/Li2NH.cif
-python scripts/bond_quantum.py data/example_CIFs/Li2NH.cif
+# Option B – plain virtual-env
+python -m venv rbt_env && source rbt_env/bin/activate
+pip install -e .  # exposes rbt-parity, rbt-bond, …
 
-# If both pass ✅, follow fabrication protocols
-# 1. docs/01_fab_protocol_Li2NH.md
-# 2. docs/03_measurement_playbook.md
+# 2. Run the parity + energy checks in one line
+rbt-parity data/example_CIFs/Li2NH.cif && \
+rbt-bond   data/example_CIFs/Li2NH.cif
+
+# 3. (Optional) generate QE input & sanity-check phonons
+rbt-qe-build data/example_CIFs/Li2NH.cif --phonons -o li2nh && \
+rbt-phonon-check tests/data/mock.dyn  # exits 1 because file contains an imaginary mode (demo)
+
+# 4. If both RBT criteria pass ✅, follow laboratory SOPs
+#    docs/01_fab_protocol_Li2NH.md → docs/03_measurement_playbook.md
 ```
 
 ## Repository Structure
