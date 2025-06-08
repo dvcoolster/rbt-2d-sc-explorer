@@ -1,0 +1,27 @@
+name: QE smoke test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  espresso:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/qe-lab/espresso:7.2
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run SCF (Li2NH 2×2×1)
+        run: pw.x < simulations/reference/scf.in > scf.out
+
+      - name: Phonon sanity (mock)
+        run: python scripts/check_phonon_stability.py tests/data/mock.dyn
+
+      - name: Upload QE output
+        uses: actions/upload-artifact@v3
+        with:
+          name: qe-scf-out
+          path: scf.out 
