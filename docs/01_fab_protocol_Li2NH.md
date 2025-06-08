@@ -7,6 +7,8 @@
 
 ---
 
+![Li2NH Flowchart](img/li2nh_flow.svg)
+
 ## Materials & Equipment Required
 
 ### Substrates
