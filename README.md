@@ -1,4 +1,4 @@
-# RBT Parity Super-Conductor Explorer ![QE](https://github.com/dvcoolster/rbt-2d-sc-explorer/actions/workflows/qe.yml/badge.svg)
+# RBT Parity Super-Conductor Explorer ![QE](https://github.com/dvcoolster/rbt-2d-sc-explorer/actions/workflows/qe.yml/badge.svg) ![Tests](https://github.com/dvcoolster/rbt-2d-sc-explorer/actions/workflows/tests.yml/badge.svg)
 
 **Goal:** Verify (or falsify) the claim that certain 2-D hydride films become superconducting above 300 K **at 1 bar** if and only if:
 
