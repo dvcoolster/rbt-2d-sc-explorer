@@ -1,0 +1,54 @@
+&CONTROL
+   calculation = 'scf'
+   restart_mode = 'from_scratch'
+   prefix = 'BeC3H9_strain_+00'
+   outdir = './tmp'
+   pseudo_dir = './pseudo'
+   etot_conv_thr = 1.0d-6
+/
+
+&SYSTEM
+   ibrav = 4
+   celldm(1) = 9.165171
+   celldm(3) = 2.474227
+   nat = 15
+   ntyp = 3
+   ecutwfc = 80.0
+   ecutrho = 640.0
+   occupations = 'smearing'
+   smearing = 'gaussian'
+   degauss = 0.02
+   assume_isolated = '2D'
+/
+
+&ELECTRONS
+   conv_thr = 1.0d-10
+   mixing_beta = 0.3
+   mixing_mode = 'plain'
+   electron_maxstep = 100
+/
+
+ATOMIC_SPECIES
+Be  9.012182  Be.pbe-spn-kjpaw_psl.1.0.0.UPF
+H  1.007940  H.pbe-kjpaw_psl.1.0.0.UPF
+C  12.010700  C.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS crystal
+Be  0.000000  0.000000  0.500000
+Be  0.333333  0.666667  0.500000
+Be  0.666667  0.333333  0.500000
+H  0.285000  0.142500  0.620000
+H  0.142500  0.427500  0.620000
+H  0.572500  0.857500  0.620000
+H  0.000000  0.500000  0.650000
+H  0.333333  0.166670  0.650000
+H  0.666667  0.833330  0.650000
+H  0.285000  0.142500  0.380000
+H  0.142500  0.427500  0.380000
+H  0.572500  0.857500  0.380000
+C  0.166670  0.333333  0.585000
+C  0.500000  0.000000  0.585000
+C  0.833330  0.666667  0.585000
+
+K_POINTS automatic
+16 16 1 0 0 0

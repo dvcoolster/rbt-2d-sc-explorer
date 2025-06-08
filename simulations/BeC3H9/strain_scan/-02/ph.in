@@ -1,0 +1,20 @@
+&INPUTPH
+   tr2_ph = 1.0d-16
+   prefix = 'BeC3H9_strain_-02'
+   outdir = './tmp'
+   fildyn = 'BeC3H9_strain_-02.dyn'
+   fildvscf = 'BeC3H9_strain_-02.dvscf'
+   fildrho = 'BeC3H9_strain_-02.drho'
+   alpha_mix(1) = 0.3
+   nmix_ph = 4
+   trans = .true.
+   epsil = .true.
+   zue = .true.
+   electron_phonon = 'interpolated'
+   el_ph_sigma = 0.005
+   el_ph_nsigma = 10
+   ldisp = .true.
+   nq1 = 8
+   nq2 = 8
+   nq3 = 1
+/

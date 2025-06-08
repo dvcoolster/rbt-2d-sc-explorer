@@ -1,0 +1,36 @@
+data_BeC3H9
+_audit_creation_method           'Created for RBT 2D-SC explorer'
+_chemical_name_systematic        'Beryllium tricarbide nonahydride'
+_chemical_formula_structural     'Be C3 H9'
+_chemical_formula_sum            'Be C3 H9'
+_cell_length_a                   4.8500
+_cell_length_b                   4.8500
+_cell_length_c                   12.0000
+_cell_angle_alpha                90.0000
+_cell_angle_beta                 90.0000
+_cell_angle_gamma                120.0000
+_symmetry_space_group_name_H-M   'P 1'
+_symmetry_Int_Tables_number      1
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+Be1 Be 0.00000 0.00000 0.50000 1.00000
+Be2 Be 0.33333 0.66667 0.50000 1.00000
+Be3 Be 0.66667 0.33333 0.50000 1.00000
+C1  C  0.16667 0.33333 0.58500 1.00000
+C2  C  0.50000 0.00000 0.58500 1.00000
+C3  C  0.83333 0.66667 0.58500 1.00000
+H1  H  0.28500 0.14250 0.62000 1.00000
+H2  H  0.14250 0.42750 0.62000 1.00000
+H3  H  0.57250 0.85750 0.62000 1.00000
+H4  H  0.00000 0.50000 0.65000 1.00000
+H5  H  0.33333 0.16667 0.65000 1.00000
+H6  H  0.66667 0.83333 0.65000 1.00000
+H7  H  0.28500 0.14250 0.38000 1.00000
+H8  H  0.14250 0.42750 0.38000 1.00000
+H9  H  0.57250 0.85750 0.38000 1.00000 

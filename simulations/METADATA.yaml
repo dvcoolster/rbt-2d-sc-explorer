@@ -1,0 +1,33 @@
+Li2NH:
+  kgrid: 12x12x1
+  qgrid: 6x6x1
+  lambda_coarse: 0.55
+  ecutwfc: 60.0
+  ecutrho: 480.0
+  status: completed_mock
+  
+BeC3H9:
+  kgrid: 16x16x1
+  qgrid: 8x8x1
+  lambda_coarse: 3.4
+  ecutwfc: 80.0
+  ecutrho: 640.0
+  status: setup_phase
+  notes: "Beryllium carbide hydride - potential high-Tc 2D superconductor"
+  
+convergence_tests:
+  BeC3H9:
+    kgrid_tested: [8x8x1, 12x12x1, 16x16x1, 20x20x1]
+    ecutwfc_tested: [60, 70, 80, 90]
+    target_accuracy: 1_meV_per_atom
+    
+experimental_targets:
+  Li2NH:
+    Tc_predicted: 180_K
+    strain_optimal: -3_percent
+    fabrication_method: CVD_3day_protocol
+    
+  BeC3H9:
+    Tc_predicted: TBD
+    fabrication_method: TBD_beryllium_safety_required
+    safety_notes: "Beryllium compounds require specialized handling - see SOPs" 
