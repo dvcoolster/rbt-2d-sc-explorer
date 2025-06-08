@@ -1,0 +1,318 @@
+name: Superconductivity Measurement Report
+description: Report results from 4-probe resistance measurements on RBT superconductor candidates
+title: "[MEASUREMENT] Results for "
+labels: ["measurement", "results"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Superconductivity Measurement Results
+        
+        🔬 **Critical Submission**: Use this template to report R(T) measurement results on RBT superconductor candidates.
+        
+        ⚠️ **If you observe R < 10 nΩ at T > 300K, this could be the first room-temperature superconductor discovery!**
+        Please provide complete data and be prepared for independent verification requests.
+
+  - type: input
+    id: sample_id
+    attributes:
+      label: Sample ID
+      description: Unique identifier for the measured sample
+      placeholder: "e.g., Li2NH_UPenn_2024_001"
+    validations:
+      required: true
+
+  - type: input
+    id: material_formula
+    attributes:
+      label: Material Formula
+      description: Chemical formula of the measured material
+      placeholder: "e.g., Li2NH"
+    validations:
+      required: true
+
+  - type: input
+    id: measurement_date
+    attributes:
+      label: Measurement Date
+      description: Date when the measurement was performed
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: measurement_outcome
+    attributes:
+      label: 🎯 Primary Result
+      description: "What was the main outcome of your measurement?"
+      options:
+        - "🏆 SUCCESS: Zero resistance achieved (R < 10 nΩ)"
+        - "📈 PARTIAL: Resistance drop observed but not zero"
+        - "📊 BASELINE: Normal metallic/semiconducting behavior"
+        - "❌ FAILURE: Measurement issues or sample problems"
+        - "🔄 IN PROGRESS: Measurement ongoing"
+    validations:
+      required: true
+
+  - type: input
+    id: minimum_resistance
+    attributes:
+      label: Minimum Resistance (nΩ)
+      description: "Lowest resistance value observed in your measurement"
+      placeholder: "e.g., 8.5"
+    validations:
+      required: true
+
+  - type: input
+    id: temperature_range
+    attributes:
+      label: Temperature Range (K)
+      description: "Temperature range of your R(T) measurement"
+      placeholder: "e.g., 295-350"
+    validations:
+      required: true
+
+  - type: input
+    id: critical_temperature
+    attributes:
+      label: Critical Temperature Tc (K)
+      description: "Temperature where resistance drops to < 50% of normal value (if applicable)"
+      placeholder: "e.g., 315.2"
+    validations:
+      required: false
+
+  - type: input
+    id: zero_resistance_temp
+    attributes:
+      label: Zero Resistance Temperature (K)
+      description: "Temperature where R first drops below 10 nΩ (if applicable)"
+      placeholder: "e.g., 318.7"
+    validations:
+      required: false
+
+  - type: textarea
+    id: rt_data
+    attributes:
+      label: 📊 R(T) Data
+      description: |
+        **CRITICAL**: Please paste your R(T) data here in CSV format.
+        Include columns: Temperature(K), Resistance(Ohm), Voltage(V), Current(A)
+        
+        If data is too large, please upload to a file sharing service and provide the link.
+      placeholder: |
+        Temperature(K),Resistance(Ohm),Voltage(V),Current(A)
+        295.0,2.45e-7,2.45e-4,1.00e-3
+        296.0,2.43e-7,2.43e-4,1.00e-3
+        297.0,2.41e-7,2.41e-4,1.00e-3
+        ...
+        315.0,1.25e-8,1.25e-5,1.00e-3
+        316.0,9.2e-9,9.2e-6,1.00e-3
+        317.0,8.1e-9,8.1e-6,1.00e-3
+        ...
+      render: csv
+    validations:
+      required: false
+
+  - type: input
+    id: data_file_link
+    attributes:
+      label: 📁 Data File Link (if too large for text box)
+      description: "Link to full dataset (Google Drive, Dropbox, etc.)"
+      placeholder: "https://drive.google.com/file/d/..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: measurement_conditions
+    attributes:
+      label: 🔧 Measurement Conditions
+      description: |
+        Provide detailed measurement parameters:
+        - Instrument used
+        - Current level
+        - Integration time
+        - Temperature stability
+        - Environmental conditions
+      placeholder: |
+        Instrument: Keithley 2182A nanovoltmeter + 6220 current source
+        Measurement current: 1.0 μA DC
+        Integration time: 10 s per point
+        Temperature stability: ±0.1 K
+        Environment: N2 purged probe station
+        Contact resistance: <0.5 Ω
+      value: |
+        Instrument: 
+        Measurement current: 
+        Integration time: 
+        Temperature stability: 
+        Environment: 
+        Contact resistance: 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: reproducibility
+    attributes:
+      label: 🔁 Reproducibility
+      description: "How many devices/measurements show similar results?"
+      options:
+        - "Single measurement - needs replication"
+        - "2-3 devices show consistent results"
+        - "Multiple devices (>3) consistently reproduce"
+        - "Multiple wafers/batches show same behavior"
+        - "Independent lab confirmation obtained"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: superconductivity_tests
+    attributes:
+      label: ✅ Superconductivity Confirmation Tests
+      description: "Which additional tests were performed to confirm superconductivity?"
+      options:
+        - label: "Critical current measurement (I-V curve)"
+        - label: "Magnetic field dependence (H-field sweep)"
+        - label: "AC susceptibility measurement"
+        - label: "Meissner effect observation"
+        - label: "Temperature cycling reproducibility"
+        - label: "Multiple contact configuration verification"
+
+  - type: input
+    id: critical_current
+    attributes:
+      label: Critical Current Ic (mA)
+      description: "Maximum current before superconductivity is lost (if measured)"
+      placeholder: "e.g., 2.3"
+    validations:
+      required: false
+
+  - type: input
+    id: critical_field
+    attributes:
+      label: Critical Field Hc2 (Oe)
+      description: "Magnetic field that destroys superconductivity (if measured)"
+      placeholder: "e.g., 850"
+    validations:
+      required: false
+
+  - type: textarea
+    id: sample_characterization
+    attributes:
+      label: 🔬 Sample Characterization
+      description: |
+        Provide characterization data that confirms sample quality:
+        - XPS (oxidation state, composition)
+        - XRD (crystal structure, phase)
+        - Thickness measurement
+        - Surface morphology
+      placeholder: |
+        XPS: Li 1s @ 55.7 eV (Li2NH), N 1s @ 395.8 eV, O < 2%
+        XRD: Li2NH (001) peak, good crystallinity
+        Thickness: 48 nm (Li2NH) + 12 nm (BN cap)
+        AFM: RMS = 1.5 nm, continuous film
+    validations:
+      required: false
+
+  - type: dropdown
+    id: data_quality
+    attributes:
+      label: 📈 Data Quality Assessment
+      description: "How would you rate the quality of your measurement data?"
+      options:
+        - "Excellent - publication ready"
+        - "Good - minor noise/artifacts"
+        - "Fair - some measurement issues"
+        - "Poor - significant problems"
+        - "Uncertain - need expert review"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issues_artifacts
+    attributes:
+      label: ⚠️ Issues & Artifacts
+      description: |
+        Report any measurement issues, artifacts, or concerns:
+        - Contact problems
+        - Temperature instability
+        - Noise sources
+        - Sample degradation
+        - Unexpected behavior
+      placeholder: |
+        - Slight baseline drift (~2% over 2 hours)
+        - One voltage contact showed intermittent behavior
+        - Small upturn in R(T) above 340K (possible sample degradation)
+    validations:
+      required: false
+
+  - type: input
+    id: lab_info
+    attributes:
+      label: 🏢 Lab Information
+      description: "Institution and primary contact"
+      placeholder: "University of Pennsylvania, Dr. Deep Jariwala (@deepj)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: verification_request
+    attributes:
+      label: 🤝 Independent Verification
+      description: "Are you requesting independent verification of these results?"
+      options:
+        - "🔥 URGENT - potential breakthrough, need immediate verification"
+        - "✅ YES - would welcome independent confirmation"
+        - "💭 MAYBE - open to collaboration discussions"
+        - "❌ NO - preliminary results only"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: 📝 Additional Information
+      description: |
+        Any other relevant information:
+        - Theoretical predictions vs. observations
+        - Comparison with literature
+        - Future experiments planned
+        - Collaboration requests
+      placeholder: |
+        - Results consistent with RBT prediction of Tc ≈ 315K
+        - Planning AC susceptibility measurements next week
+        - Would appreciate theoretical input on critical field behavior
+        - Happy to share samples with qualified labs
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: publication_intent
+    attributes:
+      label: 📄 Publication Plans
+      description: "What are your plans for publishing these results?"
+      options:
+        - label: "Preparing manuscript for high-impact journal (Nature, Science)"
+        - label: "Planning submission to specialized journal"
+        - label: "Seeking collaboration before publication"
+        - label: "Results not ready for publication yet"
+        - label: "Open to community peer review process"
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## 🚨 Important Notes for Room-Temperature Superconductivity Claims
+        
+        **If your measurement shows R < 10 nΩ at T > 300K:**
+        
+        1. **🔒 Secure your data immediately** - backup all files
+        2. **📋 Document everything** - detailed protocols, conditions, artifacts
+        3. **🔄 Repeat measurements** - multiple devices, multiple operators
+        4. **🤝 Seek independent verification** - collaborate with other labs
+        5. **📞 Contact theory experts** - verify consistency with RBT predictions
+        6. **⚖️ Consider IP protection** - before public disclosure
+        7. **📢 Prepare for scrutiny** - extraordinary claims require extraordinary evidence
+        
+        **This could be the discovery that changes the world! 🌍** 

@@ -1,0 +1,5 @@
+Sample_ID,Material_Formula,Date_Analyzed,K_Parity,Parity_Pass,Phonon_Energy_meV,Energy_Pass,Both_Pass,Predicted_Tc_K,Fabrication_Status,Min_Resistance_nΩ,Tc_Measured_K,Superconducting,Lab_Contact,Priority,Notes
+Li2NH_example,Li2NH,2024-01-15,0,TRUE,87.2,TRUE,TRUE,324,Completed,8.5,315.2,TRUE,Deep Jariwala,HIGH,Room temperature superconductivity achieved!
+Li4NH_example,Li4NH,2024-01-15,0,TRUE,92.1,TRUE,TRUE,358,In Progress,,,FALSE,Deep Jariwala,MEDIUM,Ready for measurement
+B9H6_example,B9H6,2024-01-15,0,TRUE,100.3,TRUE,TRUE,402,Planning,,,FALSE,Deep Jariwala,HIGH,Highest predicted Tc
+Control_MgB2,MgB2,2024-01-15,2,FALSE,45.6,FALSE,FALSE,156,Control,500000,39,TRUE,Deep Jariwala,LOW,Known superconductor control 

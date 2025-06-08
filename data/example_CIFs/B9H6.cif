@@ -1,0 +1,87 @@
+# B9H6 - Borane 2D Structure
+# RBT Superconductor Candidate  
+# Expected to pass both K=0 and energy threshold tests
+
+data_B9H6
+_audit_creation_date              2024-01-15
+_audit_creation_method            'Generated for RBT screening'
+_audit_update_record             
+;
+2024-01-15 Generated as example for RBT-2D-SC-Explorer
+;
+
+_chemical_name_systematic         'Borane cluster'
+_chemical_name_common             'B9H6'
+_chemical_formula_analytical      'B9H6'
+_chemical_formula_sum             'B9 H6'
+_chemical_formula_weight          103.341
+
+_space_group_IT_number            191
+_space_group_name_H-M_alt         'P 6/m m m'
+_space_group_name_Hall            '-P 6 2'
+
+_cell_length_a                    5.800
+_cell_length_b                    5.800
+_cell_length_c                    22.000
+_cell_angle_alpha                 90.000
+_cell_angle_beta                  90.000
+_cell_angle_gamma                 120.000
+_cell_volume                      641.04
+_cell_formula_units_Z             2
+
+_atom_sites_solution_primary      direct
+_atom_sites_solution_secondary    difmap
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_B_iso_or_equiv
+B1   B   0.00000  0.00000  0.00000  1.000  1.20
+B2   B   0.33333  0.66667  0.05000  1.000  1.20
+B3   B   0.66667  0.33333  0.05000  1.000  1.20
+B4   B   0.50000  0.00000  0.10000  1.000  1.20
+B5   B   0.00000  0.50000  0.10000  1.000  1.20
+B6   B   0.50000  0.50000  0.10000  1.000  1.20
+B7   B   0.33333  0.66667  0.95000  1.000  1.20
+B8   B   0.66667  0.33333  0.95000  1.000  1.20
+B9   B   0.00000  0.00000  0.15000  1.000  1.20
+H1   H   0.20000  0.00000  0.02000  1.000  1.80
+H2   H   0.80000  0.00000  0.02000  1.000  1.80
+H3   H   0.00000  0.20000  0.02000  1.000  1.80
+H4   H   0.00000  0.80000  0.02000  1.000  1.80
+H5   H   0.00000  0.00000  0.18000  1.000  1.80
+H6   H   0.00000  0.00000  0.12000  1.000  1.80
+
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_23
+_atom_site_aniso_U_13
+_atom_site_aniso_U_12
+B1   0.0150  0.0150  0.0120  0.0000  0.0000  0.0075
+B2   0.0150  0.0150  0.0120  0.0000  0.0000  0.0075
+B3   0.0150  0.0150  0.0120  0.0000  0.0000  0.0075
+B4   0.0150  0.0150  0.0120  0.0000  0.0000  0.0075
+B5   0.0150  0.0150  0.0120  0.0000  0.0000  0.0075
+B6   0.0150  0.0150  0.0120  0.0000  0.0000  0.0075
+B7   0.0150  0.0150  0.0120  0.0000  0.0000  0.0075
+B8   0.0150  0.0150  0.0120  0.0000  0.0000  0.0075
+B9   0.0150  0.0150  0.0120  0.0000  0.0000  0.0075
+H1   0.0230  0.0230  0.0180  0.0000  0.0000  0.0115
+H2   0.0230  0.0230  0.0180  0.0000  0.0000  0.0115
+H3   0.0230  0.0230  0.0180  0.0000  0.0000  0.0115
+H4   0.0230  0.0230  0.0180  0.0000  0.0000  0.0115
+H5   0.0230  0.0230  0.0180  0.0000  0.0000  0.0115
+H6   0.0230  0.0230  0.0180  0.0000  0.0000  0.0115
+
+# Bond information (for reference)
+# B-B bonds: ~1.78 Å
+# B-H bonds: ~1.15 Å
+# Expected phonon energy: ~100 meV (above 81 meV threshold) 
+# Expected parity: K = 0 (even coordination) 

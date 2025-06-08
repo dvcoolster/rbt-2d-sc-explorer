@@ -1,0 +1,69 @@
+# Li4NH - Lithium-rich Amide 2D Structure  
+# RBT Superconductor Candidate
+# Expected to pass both K=0 and energy threshold tests
+
+data_Li4NH
+_audit_creation_date              2024-01-15
+_audit_creation_method            'Generated for RBT screening'
+_audit_update_record             
+;
+2024-01-15 Generated as example for RBT-2D-SC-Explorer
+;
+
+_chemical_name_systematic         'Lithium-rich amide'
+_chemical_name_common             'Li4NH'
+_chemical_formula_analytical      'Li4NH'
+_chemical_formula_sum             'H1 Li4 N1'
+_chemical_formula_weight          54.778
+
+_space_group_IT_number            129
+_space_group_name_H-M_alt         'P 4/n m m'
+_space_group_name_Hall            '-P 4a 2a'
+
+_cell_length_a                    4.200
+_cell_length_b                    4.200
+_cell_length_c                    18.000
+_cell_angle_alpha                 90.000
+_cell_angle_beta                  90.000
+_cell_angle_gamma                 90.000
+_cell_volume                      317.52
+_cell_formula_units_Z             2
+
+_atom_sites_solution_primary      direct
+_atom_sites_solution_secondary    difmap
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_B_iso_or_equiv
+Li1  Li  0.00000  0.50000  0.10000  1.000  1.80
+Li2  Li  0.50000  0.00000  0.10000  1.000  1.80
+Li3  Li  0.00000  0.50000  0.90000  1.000  1.80
+Li4  Li  0.50000  0.00000  0.90000  1.000  1.80
+N1   N   0.00000  0.00000  0.00000  1.000  1.40
+H1   H   0.00000  0.00000  0.06000  1.000  2.20
+
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_23
+_atom_site_aniso_U_13
+_atom_site_aniso_U_12
+Li1  0.0220  0.0220  0.0180  0.0000  0.0000  0.0000
+Li2  0.0220  0.0220  0.0180  0.0000  0.0000  0.0000
+Li3  0.0220  0.0220  0.0180  0.0000  0.0000  0.0000
+Li4  0.0220  0.0220  0.0180  0.0000  0.0000  0.0000
+N1   0.0140  0.0140  0.0120  0.0000  0.0000  0.0000
+H1   0.0280  0.0280  0.0240  0.0000  0.0000  0.0000
+
+# Bond information (for reference)
+# Li-N bonds: ~2.15 Å
+# N-H bond: ~1.08 Å
+# Expected phonon energy: ~92 meV (above 81 meV threshold)
+# Expected parity: K = 0 (even coordination) 

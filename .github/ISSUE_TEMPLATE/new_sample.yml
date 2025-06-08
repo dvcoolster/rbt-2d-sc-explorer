@@ -1,0 +1,177 @@
+name: New Sample Report
+description: Report fabrication and characterization of a new RBT superconductor candidate
+title: "[SAMPLE] New candidate: "
+labels: ["sample", "fabrication"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## New RBT Superconductor Candidate Report
+        
+        Use this template to report fabrication and initial characterization of new 2-D superconductor candidates.
+        This helps track progress and enables collaboration across the RBT community.
+
+  - type: input
+    id: material_formula
+    attributes:
+      label: Material Formula
+      description: Chemical formula of the target material
+      placeholder: "e.g., Li2NH, Li4NH, B9H6"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: parity_result
+    attributes:
+      label: RBT Parity Test (K = 0)
+      description: Result of computational parity analysis
+      options:
+        - "✅ PASS (K = 0)"
+        - "❌ FAIL (K ≠ 0)"
+        - "⏳ Not tested yet"
+    validations:
+      required: true
+
+  - type: input
+    id: phonon_energy
+    attributes:
+      label: Phonon Energy (meV)
+      description: Estimated ħω*/π from bond quantum analysis
+      placeholder: "e.g., 87.5"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: energy_threshold
+    attributes:
+      label: Energy Threshold Test (≥ 81 meV)
+      description: Does the phonon energy meet the RBT threshold?
+      options:
+        - "✅ PASS (≥ 81 meV)"
+        - "❌ FAIL (< 81 meV)"
+        - "⏳ Not tested yet"
+    validations:
+      required: true
+
+  - type: input
+    id: predicted_tc
+    attributes:
+      label: Predicted Tc (K)
+      description: Theoretical critical temperature from RBT model
+      placeholder: "e.g., 325"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: fabrication_status
+    attributes:
+      label: Fabrication Status
+      description: Current status of sample fabrication
+      options:
+        - "📋 Planning phase"
+        - "🧪 In progress"
+        - "✅ Completed successfully"
+        - "❌ Failed - need to retry"
+        - "⏸️ On hold"
+    validations:
+      required: true
+
+  - type: textarea
+    id: fabrication_details
+    attributes:
+      label: Fabrication Details
+      description: |
+        Provide details about the fabrication process:
+        - Substrate used
+        - Deposition conditions
+        - Film thickness
+        - Capping layer details
+        - Any deviations from protocol
+      placeholder: |
+        Substrate: Si/SiO2 (300 nm oxide)
+        Li deposition: 25 nm @ 0.5 Å/s, RT
+        Nitridation: N2 plasma, 300W, 30 min
+        NH3 treatment: 200°C, 1 hour
+        BN cap: 10 nm @ 100°C
+        
+        Issues: Slight Li oxidation during transfer, but XPS shows <3% O content
+    validations:
+      required: false
+
+  - type: textarea
+    id: characterization
+    attributes:
+      label: Initial Characterization
+      description: |
+        Report any characterization performed:
+        - XPS results (elements, oxidation state)
+        - XRD (crystal structure, phase purity)
+        - AFM/SEM (morphology, thickness)
+        - Electrical (sheet resistance, contacts)
+      placeholder: |
+        XPS: Li 1s @ 55.7 eV (amide), N 1s @ 395.8 eV, O 1s @ 531.2 eV (2.1%)
+        XRD: Li2NH (001) peak at 2θ = 12.3°, good crystallinity
+        AFM: RMS roughness 1.8 nm, continuous film
+        Sheet resistance: 245 Ω/□ at RT
+    validations:
+      required: false
+
+  - type: dropdown
+    id: ready_for_measurement
+    attributes:
+      label: Ready for Superconductivity Measurement?
+      description: Is the sample ready for 4-probe R(T) testing?
+      options:
+        - "✅ Yes - ready for measurement"
+        - "🔧 Almost - minor work needed"
+        - "❌ No - major issues to resolve"
+        - "⚠️ Uncertain - need advice"
+    validations:
+      required: true
+
+  - type: input
+    id: lab_contact
+    attributes:
+      label: Lab Contact
+      description: Primary contact person for this sample
+      placeholder: "Dr. Jane Smith (@jsmith), University of Pennsylvania"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority_level
+    attributes:
+      label: Priority Level
+      description: How urgent is measurement of this sample?
+      options:
+        - "🔥 HIGH - potential breakthrough"
+        - "⚡ MEDIUM - promising candidate"
+        - "🔬 LOW - exploratory work"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional Information
+      description: Any other relevant details, questions, or requests for collaboration
+      placeholder: |
+        - Would appreciate independent verification from another lab
+        - Happy to share samples with collaborators
+        - Looking for advice on measurement setup optimization
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: data_sharing
+    attributes:
+      label: Data Sharing
+      description: Please confirm data sharing preferences
+      options:
+        - label: I agree to share anonymized characterization data with the RBT community
+          required: false
+        - label: I am willing to provide samples to collaborating labs for independent verification
+          required: false
+        - label: I will report measurement results using the measurement report template
+          required: true 
